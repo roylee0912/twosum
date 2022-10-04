@@ -4,6 +4,8 @@ import logo from "./images/png/logo-color.png";
 import { useNavigate } from "react-router-dom";
 const CreateAccount = () => {
   const navigate = useNavigate();
+  
+  
   return (
     <div className="create-account">
       {/* MAKE SURE TO HAVE THIS FORM BE USED TO CREATE A NEW USER IN BACKEND*/}
@@ -27,7 +29,7 @@ const CreateAccount = () => {
                 name="month"
                 placeholder="MM"
                 className="group-input"
-              ></input>
+              ></input> 
               <input
                 type="text"
                 name="day"
