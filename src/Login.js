@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import logo from "./images/png/logo-black.png";
 import { useNavigate } from "react-router-dom";
 const Login = (props) => {
   const navigate = useNavigate();
-  if (!props.show) {
-    return null;
+  function handleSubmit(e) {
+    e.preventDefault();
+    const user = {
+      username: e.target.username.value,
+      password: e.target.password.value,
+      email: e.target.email.value,
+    };
+    //update all the username
+    fetch("http://localhost:9292/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then((r) => r.json());
+
+    navigate("/create-account");
   }
 
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) props.onClose();
   };
+  if (!props.show) {
+    return null;
+  }
   return (
     <div
       className={`modal ${props.show ? "show" : ""}`}
@@ -33,13 +51,17 @@ const Login = (props) => {
             <span>Cookie Policy</span>.
           </h5>
         </div>
-        <form className="modal-form">
-          <input type="text" placeholder="Username"></input>
-          <input type="text" placeholder="Password"></input>
-          <input type="text" placeholder="Check Password"></input>
-          <input type="text" placeholder="Email"></input>
+        <form className="modal-form" onSubmit={(e) => handleSubmit(e)}>
+          <input type="text" name="username" placeholder="Username"></input>
+          <input type="text" name="password" placeholder="Password"></input>
+          <input
+            type="text"
+            name="check-password"
+            placeholder="Check Password"
+          ></input>
+          <input type="text" name="email" placeholder="Email"></input>
+          <button type="submit">Sign Up</button>
         </form>
-        <button onClick={() => navigate("/create-account")}>Sign Up</button>
       </div>
     </div>
   );

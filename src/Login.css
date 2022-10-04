@@ -60,7 +60,7 @@ form > input {
   background-color: rgba(238, 238, 238, 0.473);
 }
 
-.modal-content > button {
+form > button {
   margin: 20px;
   color: white;
   font-weight: bold;

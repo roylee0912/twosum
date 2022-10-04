@@ -1,0 +1,23 @@
+.profile-card-content {
+  display: flex;
+  border-radius: 30px;
+  background-color: rgb(255, 177, 177);
+}
+.main-img {
+  width: 30vw;
+  height: 70vh;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.profile-card-description {
+  width: 100%;
+  padding-top: 8%;
+  padding-left: 10%;
+}
+.profile-card-description > h1 {
+  padding-top: 20%;
+  color: white;
+}
+.profile-card-description > h2 {
+  color: white;
+}

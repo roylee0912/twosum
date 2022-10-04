@@ -108,3 +108,33 @@
   border: 1px solid lightgray;
   border-radius: 30px;
 }
+.browse-buttons {
+  text-align: center;
+  padding-right: 12%;
+  padding-top: 1%;
+}
+.browse-buttons > button {
+  background-color: white;
+
+  border-radius: 100%;
+  padding: 30px;
+  font-size: 30px;
+  margin-right: 20px;
+  transition: 300ms all;
+}
+.browse-buttons > .dislike {
+  border: 2px solid lightgray;
+  color: lightgray;
+}
+.browse-buttons > .dislike:hover {
+  transform: scale(1.1);
+}
+.browse-buttons > .like {
+  border: 2px solid rgb(255, 177, 177);
+  color: rgb(255, 177, 177);
+  font-weight: bold;
+}
+
+.browse-buttons > .like:hover {
+  transform: scale(1.1);
+}
