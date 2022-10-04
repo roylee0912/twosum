@@ -1,0 +1,53 @@
+.profile-card {
+    width: 60vw;
+    margin-top: 5%;
+    height: 70vh;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+}
+
+.profile-profile-img {
+    display: block;
+    margin: auto;
+    height: 50%;
+    border: 3px solid red;
+    padding: 10px;
+}
+
+.profile-first-name {
+    font-size: 50px;
+    width: auto;
+    height: 10%;
+    padding-left: 5%;
+    float: left
+}
+
+.profile-gender {
+    width: auto;
+    height: 10%;
+    font-size: 25px;
+    float: left;
+    margin-top: 25px;
+}
+
+.profile-age {
+    font-size: 50px;
+    width: auto;
+    height: 10%;
+    float: right;
+    padding-right: 5%;
+    text-align: center;
+}
+
+.profile-bio {
+    width: 70%;
+    font-size: 20px;
+    padding-left: 5%;
+    float: left;
+}
+
+.profile-desired_sex {
+    width: 25%;
+    font-size: 20px;
+    float: right;
+}

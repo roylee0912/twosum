@@ -28,10 +28,10 @@ const App = () => {
           }
         />
         <Route
-          path="/profile"
+          path="/profile/:email"
           element={
             <>
-              <Profile />
+              <Profile currentUser={user} />
             </>
           }
         />

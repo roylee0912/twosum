@@ -27,10 +27,13 @@ const Browse = ({ currentUser }) => {
     //add user as liked and visited
     setRefresh((refresh) => refresh + 1);
   }
+
+  console.log(currentUser)
+
   return (
     <div className="browse">
       <div className="browse-matches">
-        <div className="profile" onClick={() => navigate("/profile")}>
+        <div className="profile" onClick={() => navigate(`/profile/${currentUser.email}`)}>
           <img src={logo} className="profile-img"></img>
           {/* FILL THIS UP DYNAMICALLY */}
           <h1>John Smith</h1>

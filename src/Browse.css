@@ -101,13 +101,7 @@
   padding-left: 36%;
 }
 
-.profile-card {
-  width: 60vw;
-  margin-top: 5%;
-  height: 70vh;
-  border: 1px solid lightgray;
-  border-radius: 30px;
-}
+
 .browse-buttons {
   text-align: center;
   padding-right: 12%;
