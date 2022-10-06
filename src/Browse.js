@@ -12,6 +12,7 @@ const Browse = () => {
   const [isShowingConversations, setIsShowingConversations] = useState(true);
   const [justMatchedId, setJustMatchedId] = useState(0);
   const [showMatch, setShowMatch] = useState(false);
+  const [ageRange, setAgeRange] = useState(100)
   useEffect(() => {
     fetch("http://localhost:9292/last-user")
       .then((r) => r.json())
@@ -19,10 +20,10 @@ const Browse = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:9292/users")
+    fetch(`http://localhost:9292/users/${currentUser.age}/${ageRange}/${currentUser.desired_sex}/${currentUser.gender}`)
       .then((r) => r.json())
       .then((data) => {
-        setUser(data[Math.floor(Math.random() * (data.length - 1))]);
+        setUser(data[Math.floor(Math.random() * (data.length))]);
       });
   }, [refresh]);
 
@@ -68,6 +69,11 @@ const Browse = () => {
   function handleConversationClick() {
     setIsShowingConversations(!isShowingConversations);
   }
+
+  function handleAge (e) {
+    setAgeRange(e.target.value)
+  }
+
   return (
     <div className="browse">
       {justMatchedId == 0 ? (
@@ -112,6 +118,8 @@ const Browse = () => {
       <div className="browse-right">
         {/* MAKE THIS DROP DOWN TO A POPUP MODAL THAT SHOWS FILTERS */}
         <button>Filters</button>
+        <span>+/-</span><input className="ageRange" placeholder="Age" onChange={handleAge}></input><span> years</span>
+        <div></div>
         <img src={logo}></img>
         <div className="profile-card">
           <ProfileCard user={user} />

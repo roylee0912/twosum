@@ -141,7 +141,7 @@ const CreateAccount = () => {
                 onClick={(e) => {
                   handleShowMeClick(e);
                 }}
-                value="men"
+                value="male"
               >
                 Men
               </button>
@@ -149,7 +149,7 @@ const CreateAccount = () => {
                 onClick={(e) => {
                   handleShowMeClick(e);
                 }}
-                value="women"
+                value="female"
               >
                 Women
               </button>
@@ -157,7 +157,7 @@ const CreateAccount = () => {
                 onClick={(e) => {
                   handleShowMeClick(e);
                 }}
-                value="everyone"
+                value="all"
               >
                 Everyone
               </button>

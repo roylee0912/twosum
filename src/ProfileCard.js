@@ -6,7 +6,7 @@ const ProfileCard = (user) => {
     <div className="profile-card-content">
       <img className="main-img" src={user.user.profile_img}></img>
       <div className="profile-card-description">
-        <h1>{user.user.first_name + ", " + user.user.age}</h1>
+        <h1>{user.user.first_name + ", " + user.user.age + ", " + user.user.gender}</h1>
         <h2>{user.user.bio}</h2>
       </div>
     </div>
